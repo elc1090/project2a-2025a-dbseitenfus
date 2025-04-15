@@ -17,27 +17,22 @@ Preencha aqui a URL para acesso ao site publicado
 
 #### Desenvolvedor(a)
 
-Preencha aqui seu nome
+Daniel Brenner Seitenfus
 
 
 #### Ambiente de desenvolvimento
 
-Preencha aqui uma lista detalhada de ferramentas de desenvolvimento usadas, por exemplo:
 - VS Code
-- Outras
 
 #### Créditos
 
 Preencha aqui uma lista detalhada de recursos aproveitados no projeto, por exemplo:
-- URL de tutoriais/vídeos consultados
-- Créditos para colegas que colaboraram
+- https://getbootstrap.com/docs/4.1/components/card/
 
 
 #### Bastidores
 
-
-Preencha aqui um breve relato dos bastidores da realização deste exercício, com suas impressões.
-
+Achei o desenvolvimento tranquilo. Eu sabia que poderia exceder o limite de requisições, então salvei o json em uma variável e desenvolvi as alterações apenas com os dados locais. Após terminar, testei pela última vez com os dados reais da API.
 
 
 ---
