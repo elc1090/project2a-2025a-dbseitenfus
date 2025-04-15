@@ -40,24 +40,29 @@ gitHubForm.addEventListener('submit', (e) => {
 
                 } else {
 
-                    console.log(commit)
-
-                    // Dentro do for (let commit of data)
-                    let ul = document.getElementById('userRepos');
-                    let li = document.createElement('li');
-                    li.classList.add('list-group-item');
-                    
-                    let login = commit.author ? commit.author.login : "Autor não disponível";
-                    let message = commit.commit.message;
-                    let date = commit.commit.committer.date;
-                    
-                    li.innerHTML = (`
-                        <p><strong>Author:</strong> ${login}</p>
-                        <p><strong>Message:</strong> ${message}</p>
-                        <p><strong>Date:</strong> ${date}</p>
-                    `);
-                    
-                    ul.appendChild(li);
+                    const ul = document.getElementById('userRepos');
+                    ul.innerHTML = ''; // limpa resultados anteriores
+                
+                    for (let commit of data) {
+                        const li = document.createElement('li');
+                        li.classList.add('list-group-item', 'border-0', 'p-0'); // remove bordas e padding do list item
+                
+                        const login = commit.author ? commit.author.login : "Autor não disponível";
+                        const message = commit.commit.message;
+                        const date = new Date(commit.commit.committer.date).toLocaleString();
+                
+                        li.innerHTML = `
+                            <div class="card shadow-sm mb-4 bg-primary text-white">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-2"><strong>Autor:</strong> ${login}</h5>
+                                    <p class="card-text mb-1"><strong>Mensagem:</strong> ${message}</p>
+                                    <p class="card-text"><strong>Data:</strong> ${date}</p>
+                                </div>
+                            </div>
+                        `;
+                
+                        ul.appendChild(li);
+                    }
                 }
             }
         })
