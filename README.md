@@ -28,6 +28,7 @@ Daniel Brenner Seitenfus
 
 Preencha aqui uma lista detalhada de recursos aproveitados no projeto, por exemplo:
 - https://getbootstrap.com/docs/4.1/components/card/
+- https://docs.github.com/en/rest/commits/commits?apiVersion=2022-11-28
 
 
 #### Bastidores
